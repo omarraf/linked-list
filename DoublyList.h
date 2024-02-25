@@ -30,6 +30,9 @@ public:
     void printReverse() const;
     void deleteNode(int data);
     void insertBack(int data);
+    //Swap the first node of the calling object with the 
+    //first node of the parameter object.
+    void swapFirstNode(DoublyList &paramNode);
  
     void clearList();
     ~DoublyList();
