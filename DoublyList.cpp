@@ -100,6 +100,20 @@ void DoublyList::insertBack(int valueToInsert)
    last->getPrev()->setNext(last);
    count++;
 }
+void DoublyList::swapFirstNode(DoublyList &paramNode)
+{
+    
+    
+    DLLNode *secondNode = first->getNext();
+    first->setNext(paramNode.first->getNext());
+    
+    DLLNode *tempFirst = paramNode.first;
+    paramNode.first = first;
+    first = tempFirst;
+    first->setNext(secondNode);
+    
+    
+}
 void DoublyList::clearList()
 {
     DLLNode *temp = first;
