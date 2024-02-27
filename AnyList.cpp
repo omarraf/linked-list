@@ -66,6 +66,15 @@ void AnyList::replaceSecondToLast(int paramValue)
      
     
 }
+void AnyList::swapSecondToLast(int paramValueToSwap)
+{
+    Node* current = first;
+    for (int i = 0; i < count - 2; i++)
+    {
+        current = current->getNext();
+    }
+    current->setData(paramValueToSwap);
+}
 AnyList::~AnyList()
 {
 	if (first != nullptr)
