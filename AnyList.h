@@ -33,6 +33,10 @@ public:
 	void clearList();
 	
 	void replaceSecondToLast(int);
+
+	//Replace the value of the second node of the calling object 
+    //with the value passed by the parameter.
+    void swapSecondToLast(int paramValue);
 	~AnyList();
 
 private:
