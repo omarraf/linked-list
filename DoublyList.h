@@ -33,6 +33,7 @@ public:
     //Swap the first node of the calling object with the 
     //first node of the parameter object.
     void swapFirstNode(DoublyList &paramNode);
+    void deleteSecondToLast();
  
     void clearList();
     ~DoublyList();
