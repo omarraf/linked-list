@@ -114,6 +114,21 @@ void DoublyList::swapFirstNode(DoublyList &paramNode)
     
     
 }
+void DoublyList::deleteSecondToLast()
+{
+    DLLNode* current = first;
+    for (int i = 0; i < count - 2; i++)
+    {
+        current = current->getNext();
+    }
+    current->getPrev()->setNext(current->getNext());
+    current->getNext()->setPrev(current->getPrev());
+    delete current;
+    current = nullptr;
+    count--;
+
+    
+}
 void DoublyList::clearList()
 {
     DLLNode *temp = first;
@@ -126,7 +141,6 @@ void DoublyList::clearList()
     last = nullptr;
     count = 0;
 }
-//Replace the value of the second-to-last node of the calling object with the value passed by the parameter.
 
 DoublyList::~DoublyList()
 {
